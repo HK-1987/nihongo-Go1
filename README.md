@@ -152,7 +152,6 @@
     
     <div id="sakura-container" class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden"></div>
 
-
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, onAuthStateChanged, signOut, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
@@ -1070,7 +1069,6 @@
             ];
             topUsers.forEach(u => otherDataBatch.set(doc(collection(db, `artifacts/${appId}/public/data/hall_of_fame/monthly/scores`)), u));
 
-
             otherDataBatch.set(flagRef, { completed: true, timestamp: new Date() });
             await otherDataBatch.commit();
         }
@@ -1092,3 +1090,5 @@
     </script>
 </body>
 </html>
+
+
